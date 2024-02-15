@@ -27,4 +27,18 @@ public class PlayerMovement : MonoBehaviour
         //Movement
         rb.MovePosition(rb.position * movement * moveSpeed * Time.fixedDeltaTime);
     }
+
+    private Vector3 RemoveDiagonal(Vector3 inputVector)
+    {
+        float X = inputVector.x;
+        float Y = inputVector.y;
+    if (X * X > Y * Y)
+        {
+            return new Vector3(X, 0, 0);
+        }
+        else
+        {
+            return new Vector3(0, Y, 0);
+        }
+    }
 }
