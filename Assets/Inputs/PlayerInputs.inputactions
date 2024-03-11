@@ -1,1 +1,78 @@
-{}
+{
+    "name": "PlayerInputs",
+    "maps": [
+        {
+            "name": "In Game",
+            "id": "28ad9841-3fdc-4be3-bc17-ccb9c564a51e",
+            "actions": [
+                {
+                    "name": "Movement",
+                    "type": "Value",
+                    "id": "0846679a-fd35-4f09-bc10-075cb57b3318",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "Directionals",
+                    "id": "1845b491-9af0-4be6-84a1-8e9a103c06a9",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "526a6857-0bbf-4902-8ef0-f79d2a0d6661",
+                    "path": "Up Arrow [Keyboard]",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "29d3b8f7-1ea3-44f4-a038-76a8a46db028",
+                    "path": "Down Arrow [Keyboard]",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "972d0659-8474-4080-a1d5-02c2d0f1823c",
+                    "path": "Left Arrow [Keyboard]",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "6ffce60f-d4af-44b3-91dd-9b786feb4df5",
+                    "path": "Right Arrow [Keyboard]",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
