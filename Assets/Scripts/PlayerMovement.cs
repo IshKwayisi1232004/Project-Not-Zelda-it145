@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         //Movement
-        rb.MovePosition(rb.position * movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
     private Vector3 RemoveDiagonal(Vector3 inputVector)
