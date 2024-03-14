@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class AttackArea : MonoBehaviour
 {
+    private int damage = 3;
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        //if(collider.GetComponent<PlayerLife> != null)
+        //{
+        //    PlayerLife playerLife = collider.GetComponent<PlayerLife>();
+        //    playerLife.Dama
+        //}
+    }
+
     // Start is called before the first frame update
     void Start()
     {

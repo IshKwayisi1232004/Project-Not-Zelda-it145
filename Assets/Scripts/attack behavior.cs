@@ -6,9 +6,11 @@ public class attackbehavior : MonoBehaviour
 {
     private GameObject attackArea = default;
     private bool attacking = false;
+
+    [SerializeField] private float swordSpeed;
     
     private float timerToAttack = 0.25f;
-    private float timer = 0f;
+    //private float timer = 0f;
 
     public Animator animator;
    
@@ -21,27 +23,28 @@ public class attackbehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Attack();
-        }
 
-        if (attacking)
+        if (timerToAttack < 0f)
         {
-            timer += Time.deltaTime;
-
-            if (timer >= timerToAttack)
+            //attacking = false;
+            //attackArea.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                timer = 0; 
-                attacking = false;
-                attackArea.SetActive(false);
+                Attack();
             }
         }
-    }
+            else
+            {
+                timerToAttack -= Time.deltaTime;
+            }
+        }
+
 
     private void Attack()
     {
-        attacking = true;
-        attackArea.SetActive(attacking);
+        animator.SetTrigger("attacking");
+        timerToAttack = swordSpeed;
+        //attacking = true;
+        //attackArea.SetActive(attacking);
     }
 }
