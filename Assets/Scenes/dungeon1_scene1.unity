@@ -4214,6 +4214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d23358ca64787c48bdece0cb4438d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swordSpeed: 0
   animator: {fileID: 1059429425}
 --- !u!1 &1546234751
 GameObject:
@@ -4352,13 +4353,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1575524450}
   - component: {fileID: 1575524451}
+  - component: {fileID: 1575524452}
   m_Layer: 0
   m_Name: AttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1575524450
 Transform:
   m_ObjectHideFlags: 0
@@ -4422,6 +4424,18 @@ PolygonCollider2D:
       - {x: -0.83, y: -0.07}
       - {x: 0.04, y: -0.80901706}
   m_UseDelaunayMesh: 0
+--- !u!114 &1575524452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575524449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2984fb08c3c09ee4aa25b2f0aca12705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1966384431
 GameObject:
   m_ObjectHideFlags: 0
