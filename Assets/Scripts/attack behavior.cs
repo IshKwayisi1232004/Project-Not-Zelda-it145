@@ -38,6 +38,7 @@ public class attackbehavior : MonoBehaviour
             else
             {
                 timerToAttack -= Time.deltaTime;
+                animator.ResetTrigger("attacking");
             }
         }
 
