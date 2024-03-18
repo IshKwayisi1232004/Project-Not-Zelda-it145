@@ -1,5 +1,3 @@
-//Script for the player to attack when a key is input.
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,45 +6,47 @@ public class attackbehavior : MonoBehaviour
 {
     private GameObject attackArea = default;
     private bool attacking = false;
+    private bool attackInitiated = false; // Flag to track whether an attack has been initiated
 
     [SerializeField] private float swordSpeed;
-    
-    private float timerToAttack = 0.25f;
-    //private float timer = 0f;
-
     public Animator animator;
-   
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        attackArea = transform.GetChild(0).gameObject;   
+        attackArea = transform.GetChild(0).gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
-        if (timerToAttack < 0f)
+        // Check if the space key is pressed to start attacking
+        if (!attacking && Input.GetKeyDown(KeyCode.Space) && !attackInitiated)
         {
-            //attacking = false;
-            //attackArea.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Attack();
-            }
+            Attack();
+            attackInitiated = true; // Set the flag to true indicating an attack has been initiated
         }
-            else
-            {
-                timerToAttack -= Time.deltaTime;
-            }
+        // Check if the space key is released to stop attacking
+        else if (attacking && Input.GetKeyUp(KeyCode.Space))
+        {
+            StopAttack();
+            attackInitiated = false; // Reset the flag when the attack stops
         }
-
+    }
 
     private void Attack()
     {
+        attacking = true;
         animator.SetTrigger("attacking");
-        timerToAttack = swordSpeed;
-        //attacking = true;
-        //attackArea.SetActive(attacking);
+        // Optionally, activate the attack area collider or perform other attack-related actions
+    }
+
+    private void StopAttack()
+    {
+        // This method is now triggered by an animation event
+    }
+
+    // Method to be called by the animation event
+    public void EndAttackAnimation()
+    {
+        attacking = false;
     }
 }
