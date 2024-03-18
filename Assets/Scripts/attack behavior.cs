@@ -1,3 +1,5 @@
+//Script for the player to attack when a key is input.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
