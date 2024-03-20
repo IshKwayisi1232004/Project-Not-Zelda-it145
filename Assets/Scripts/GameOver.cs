@@ -7,6 +7,6 @@ public class GameOver : MonoBehaviour
 {
     public void tryAgain()
     {
-        SceneManager.LoadScene("dungeon1_scene1");
+        SceneManager.LoadScene("TitleScreen");
     }
 }

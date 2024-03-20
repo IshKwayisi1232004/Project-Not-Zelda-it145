@@ -7,6 +7,7 @@ using UnityEngine;
 public class attackbehavior : MonoBehaviour
 {
     private GameObject attackArea = default;
+    public GameObject swordSlash;
     private bool attacking = false;
 
     [SerializeField] private float swordSpeed;
@@ -20,6 +21,7 @@ public class attackbehavior : MonoBehaviour
     void Start()
     {
         attackArea = transform.GetChild(0).gameObject;   
+        swordSlash.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,6 +34,7 @@ public class attackbehavior : MonoBehaviour
             //attackArea.SetActive(false);
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                slash();
                 Attack();
             }
         }
@@ -39,8 +42,9 @@ public class attackbehavior : MonoBehaviour
             {
                 timerToAttack -= Time.deltaTime;
                 animator.ResetTrigger("attacking");
+                stopSlash();
             }
-        }
+    }
 
 
     private void Attack()
@@ -49,5 +53,15 @@ public class attackbehavior : MonoBehaviour
         timerToAttack = swordSpeed;
         //attacking = true;
         //attackArea.SetActive(attacking);
+    }
+
+    void slash()
+    {
+        swordSlash.SetActive(true);
+    }
+
+    void stopSlash()
+    {
+        swordSlash.SetActive(false);
     }
 }
