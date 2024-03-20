@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
-    public int maxHealth = 3;
+    public int maxHealth = 10;
     public int currentHealth;
     public Animator anim;
 
@@ -14,13 +14,14 @@ public class PlayerLife : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    void takeDamage(int amount)
+    public void takeDamage(int amount)
     {
         currentHealth -= amount;
 
         if(currentHealth == 0)
         {
-            anim.SetBool("IsDead", true);   
+            anim.SetBool("IsDead", true);
+            Destroy(gameObject);
         }
     }
 
