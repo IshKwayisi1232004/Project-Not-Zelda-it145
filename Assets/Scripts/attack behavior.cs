@@ -8,19 +8,21 @@ public class attackbehavior : MonoBehaviour
 {
     private GameObject attackArea = default;
     public GameObject swordSlash;
+    public GameObject arrowAttack;
     private bool attacking = false;
 
     [SerializeField] private float swordSpeed;
-    
+    [SerializeField] private float arrowSpeed;
+
     private float timerToAttack = 0.25f;
     //private float timer = 0f;
 
     public Animator animator;
-   
+
     // Start is called before the first frame update
     void Start()
     {
-        attackArea = transform.GetChild(0).gameObject;   
+        attackArea = transform.GetChild(0).gameObject;
         swordSlash.SetActive(false);
     }
 
@@ -38,12 +40,29 @@ public class attackbehavior : MonoBehaviour
                 Attack();
             }
         }
-            else
+        else
+        {
+            timerToAttack -= Time.deltaTime;
+            animator.ResetTrigger("attacking");
+            stopSlash();
+        }
+
+        if (timerToAttack < 0f)
+        {
+            //attacking = false;
+            //attackArea.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                timerToAttack -= Time.deltaTime;
-                animator.ResetTrigger("attacking");
-                stopSlash();
+                slash();
+                Attack();
             }
+        }
+        else
+        {
+            timerToAttack -= Time.deltaTime;
+            animator.ResetTrigger("attacking");
+            stopSlash();
+        }
     }
 
 
@@ -55,6 +74,12 @@ public class attackbehavior : MonoBehaviour
         //attackArea.SetActive(attacking);
     }
 
+    private void Bow_Arrow()
+    {
+        animator.SetTrigger("");
+        timerToAttack = arrowSpeed;
+    }
+
     void slash()
     {
         swordSlash.SetActive(true);
@@ -63,5 +88,15 @@ public class attackbehavior : MonoBehaviour
     void stopSlash()
     {
         swordSlash.SetActive(false);
+    }
+
+    void arrow()
+    {
+        arrowAttack.SetActive(true);
+    }
+
+    void stopArrow()
+    {
+        arrowAttack.SetActive(false);
     }
 }

@@ -34,7 +34,9 @@ public class PauseMenu : MonoBehaviour
     {
         quitSound.SetActive(true);
         WaitBeforeLoad();
+        pauseMenu.SetActive(false);
         SceneManager.LoadScene("TitleScreen");
+        
     }
 
     IEnumerator WaitBeforeLoad()
