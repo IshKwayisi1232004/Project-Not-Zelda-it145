@@ -18,11 +18,11 @@ public class attackbehavior : MonoBehaviour
     //private float timer = 0f;
 
     public Animator animator;
-   
+
     // Start is called before the first frame update
     void Start()
     {
-        attackArea = transform.GetChild(0).gameObject;   
+        attackArea = transform.GetChild(0).gameObject;
         swordSlash.SetActive(false);
     }
 
