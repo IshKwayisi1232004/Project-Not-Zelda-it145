@@ -2,28 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public MonsterDamage nib;
 public class AttackArea : MonoBehaviour
+
 {
-    private int damage = 3;
+    private int damage = 2;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        //if(collider.GetComponent<PlayerLife> != null)
-        //{
-        //    PlayerLife playerLife = collider.GetComponent<PlayerLife>();
-        //    playerLife.Dama
-        //}
+      if(collider.GetComponent<health>() !- null)
+        {
+            health health = collider.GetComponent<health>();
+        }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
