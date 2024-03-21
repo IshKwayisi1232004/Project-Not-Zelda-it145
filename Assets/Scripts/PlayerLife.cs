@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PlayerLife : MonoBehaviour
         {
             anim.SetBool("IsDead", true);
             Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
         }
     }
 
