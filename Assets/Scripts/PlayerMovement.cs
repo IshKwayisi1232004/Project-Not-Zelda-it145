@@ -10,7 +10,16 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
+    public GameObject footstep;
+
     Vector2 movement;
+
+    private void Start()
+    {
+        footstep.SetActive(false);
+    }
+
+
 
     private void Awake()
     {
@@ -32,6 +41,40 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("vertical", movement.y);
         animator.SetFloat("speed", movement.sqrMagnitude);
 
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            footsteps();
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            footsteps();
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            footsteps();
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            footsteps();
+        }
+
+        if (Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            stopFootSteps();
+        }
+        if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            stopFootSteps();
+        }
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            stopFootSteps();
+        }
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            stopFootSteps();
+        }
+
     }
 
     void FixedUpdate()
@@ -52,5 +95,15 @@ public class PlayerMovement : MonoBehaviour
         {
             return new Vector3(0, Y, 0);
         }
+    }
+
+    void footsteps()
+    {
+        footstep.SetActive(true);
+    }
+
+    void stopFootSteps()
+    {
+        footstep.SetActive(false);
     }
 }

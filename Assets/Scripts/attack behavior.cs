@@ -1,3 +1,5 @@
+//Script for the player to attack when a key is input.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,48 +7,61 @@ using UnityEngine;
 public class attackbehavior : MonoBehaviour
 {
     private GameObject attackArea = default;
+    public GameObject swordSlash;
     private bool attacking = false;
-    private bool attackInitiated = false; // Flag to track whether an attack has been initiated
 
     [SerializeField] private float swordSpeed;
+
+    private float timerToAttack = 0.25f;
+    //private float timer = 0f;
+
     public Animator animator;
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         attackArea = transform.GetChild(0).gameObject;
+        swordSlash.SetActive(false);
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        // Check if the space key is pressed to start attacking
-        if (!attacking && Input.GetKeyDown(KeyCode.Space) && !attackInitiated)
+
+        if (timerToAttack < 0f)
         {
-            Attack();
-            attackInitiated = true; // Set the flag to true indicating an attack has been initiated
+            //attacking = false;
+            //attackArea.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                slash();
+                Attack();
+            }
         }
-        // Check if the space key is released to stop attacking
-        else if (attacking && Input.GetKeyUp(KeyCode.Space))
+        else
         {
-            StopAttack();
-            attackInitiated = false; // Reset the flag when the attack stops
+            timerToAttack -= Time.deltaTime;
+            animator.ResetTrigger("attacking");
+            stopSlash();
         }
     }
+
 
     private void Attack()
     {
-        attacking = true;
         animator.SetTrigger("attacking");
-        // Optionally, activate the attack area collider or perform other attack-related actions
+        timerToAttack = swordSpeed;
+        //attacking = true;
+        //attackArea.SetActive(attacking);
     }
 
-    private void StopAttack()
+    void slash()
     {
-        // This method is now triggered by an animation event
+        swordSlash.SetActive(true);
     }
 
-    // Method to be called by the animation event
-    public void EndAttackAnimation()
+    void stopSlash()
     {
-        attacking = false;
+        swordSlash.SetActive(false);
     }
 }
