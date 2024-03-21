@@ -10886,6 +10886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
+  health: 0
 --- !u!70 &383922799
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -13456,6 +13457,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 44
       m_TileSpriteIndex: 44
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 53
+      m_TileSpriteIndex: 53
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -27039,7 +27050,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 78692ea9ce0e8624d93fe4197acd12bb, type: 2}
   - m_RefCount: 42
     m_Data: {fileID: 11400000, guid: 3af86b35f1fd6184c9f6e0176b65295a, type: 2}
-  - m_RefCount: 42
+  - m_RefCount: 43
     m_Data: {fileID: 11400000, guid: 7f097fecadaa0f444a4066c3ed470ee0, type: 2}
   - m_RefCount: 42
     m_Data: {fileID: 11400000, guid: ff6cffe61a4738d4487a912a1575d236, type: 2}
@@ -27152,14 +27163,14 @@ Tilemap:
     m_Data: {fileID: -2063167339, guid: 676a60d5cb8c4844bb5a2831196636db, type: 3}
   - m_RefCount: 42
     m_Data: {fileID: -539070132, guid: 676a60d5cb8c4844bb5a2831196636db, type: 3}
-  - m_RefCount: 42
+  - m_RefCount: 43
     m_Data: {fileID: -1974475575, guid: 676a60d5cb8c4844bb5a2831196636db, type: 3}
   - m_RefCount: 42
     m_Data: {fileID: 794323770, guid: 676a60d5cb8c4844bb5a2831196636db, type: 3}
   - m_RefCount: 42
     m_Data: {fileID: -1014403171, guid: 676a60d5cb8c4844bb5a2831196636db, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 1563
+  - m_RefCount: 1564
     m_Data:
       e00: 1
       e01: 0
@@ -27178,7 +27189,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 1563
+  - m_RefCount: 1564
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -27319,7 +27330,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!4 &990983825
 Transform:
   m_ObjectHideFlags: 0
@@ -27536,7 +27547,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1351851035, guid: 8ec01e1820c588448b237030f8e37251, type: 3}
+  m_Sprite: {fileID: -1773542508, guid: c2fc8968d679bd84faa4a7350233e070, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -27688,11 +27699,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.65}
+  m_Offset: {x: 0, y: -0.3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0625, y: 2}
+    oldSize: {x: 1, y: 1.4705882}
     newSize: {x: 0.17, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
