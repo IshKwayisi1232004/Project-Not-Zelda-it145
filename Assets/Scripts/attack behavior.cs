@@ -39,6 +39,11 @@ public class attackbehavior : MonoBehaviour
                 slash();
                 Attack();
             }
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                Arrow_Attack();
+                Attack();
+            }
         }
         else
         {
@@ -51,17 +56,17 @@ public class attackbehavior : MonoBehaviour
         {
             //attacking = false;
             //attackArea.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                slash();
-                Attack();
-            }
-        }
-        else
-        {
-            timerToAttack -= Time.deltaTime;
-            animator.ResetTrigger("attacking");
-            stopSlash();
+            //if (Input.GetKeyDown(KeyCode.LeftShift))
+            //{
+            //    arrow();
+           //     Arrow_Attack();
+           // }
+        //}
+        //else
+        //{
+        //    timerToAttack -= Time.deltaTime;
+        //    animator.ResetTrigger("bow back");
+        //    stopArrow();
         }
     }
 
@@ -74,9 +79,9 @@ public class attackbehavior : MonoBehaviour
         //attackArea.SetActive(attacking);
     }
 
-    private void Bow_Arrow()
+    private void Arrow_Attack()
     {
-        animator.SetTrigger("");
+        animator.SetTrigger("bow back");
         timerToAttack = arrowSpeed;
     }
 
