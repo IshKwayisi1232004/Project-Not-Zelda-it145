@@ -7,6 +7,9 @@ public class EnemyAI : MonoBehaviour
     //Sets the speed of the enemy's movement
     public float speed;
 
+    //Public Enemy Object
+    public GameObject enemy;
+
     //Creates an array that allows the user to place all the points of destination for the enemy
     public Transform[] moveLocation;
 
