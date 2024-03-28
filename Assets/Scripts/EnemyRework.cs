@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHit : MonoBehaviour
+public class EnemyRework : MonoBehaviour
 {
+    public int health;
+    public string enemyName;
+    public int baseAttack;
+    public float moveSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,13 +18,5 @@ public class PlayerHit : MonoBehaviour
     void Update()
     {
         
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-      if(other.CompareTag("breakable"))
-        {
-            other.GetComponent<pot>().Smash();
-        }
     }
 }
