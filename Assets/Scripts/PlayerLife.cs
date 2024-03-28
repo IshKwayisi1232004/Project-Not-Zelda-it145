@@ -8,11 +8,15 @@ public class PlayerLife : MonoBehaviour
     public int maxHealth = 10;
     public int currentHealth;
     public Animator anim;
+    public GameObject death;
+
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        anim.ResetTrigger("IsDead");
+        death.SetActive(false);
     }
 
     public void takeDamage(int amount)
@@ -21,9 +25,9 @@ public class PlayerLife : MonoBehaviour
 
         if(currentHealth == 0)
         {
-            anim.SetBool("IsDead", true);
-            Destroy(gameObject);
-            SceneManager.LoadScene("GameOver");
+            anim.SetTrigger("IsDead");
+            death.SetActive(true);
+            StartCoroutine(spawnDelay());
         }
     }
 
@@ -40,6 +44,13 @@ public class PlayerLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    private IEnumerator spawnDelay()
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
+        SceneManager.LoadScene("GameOver");
     }
 }

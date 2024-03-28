@@ -39,10 +39,10 @@ public class attackbehavior : MonoBehaviour
                 slash();
                 Attack();
             }
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            else if (Input.GetKeyDown(KeyCode.LeftShift))
             {
+                arrow();
                 Arrow_Attack();
-                Attack();
             }
         }
         else
@@ -50,30 +50,33 @@ public class attackbehavior : MonoBehaviour
             timerToAttack -= Time.deltaTime;
             animator.ResetTrigger("attacking");
             stopSlash();
+            animator.ResetTrigger("bowArrow");
+            stopArrow();
         }
 
-        if (timerToAttack < 0f)
-        {
-            //attacking = false;
-            //attackArea.SetActive(false);
-            //if (Input.GetKeyDown(KeyCode.LeftShift))
-            //{
-            //    arrow();
-           //     Arrow_Attack();
-           // }
-        //}
+        // if (timerToAttack < 0f)
+        // {
+        //attacking = false;
+        //attackArea.SetActive(false);
+        //  if (Input.GetKeyDown(KeyCode.LeftShift))
+        // {
+        //    arrow();
+        //    Arrow_Attack();
+        // }
+        // }
         //else
-        //{
-        //    timerToAttack -= Time.deltaTime;
-        //    animator.ResetTrigger("bow back");
-        //    stopArrow();
-        }
+        // {
+        //   timerToAttack -= Time.deltaTime;
+        //   animator.ResetTrigger("bowArrow");
+        //   stopArrow();
+        // }
     }
 
 
     private void Attack()
     {
         animator.SetTrigger("attacking");
+        slash();
         timerToAttack = swordSpeed;
         //attacking = true;
         //attackArea.SetActive(attacking);
@@ -81,7 +84,7 @@ public class attackbehavior : MonoBehaviour
 
     private void Arrow_Attack()
     {
-        animator.SetTrigger("bow back");
+        animator.SetTrigger("bowArrow");
         timerToAttack = arrowSpeed;
     }
 

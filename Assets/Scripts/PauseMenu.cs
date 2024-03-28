@@ -28,19 +28,20 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
+        pauseSound.SetActive(false);
     }
 
     public void Quit()
     {
         quitSound.SetActive(true);
-        WaitBeforeLoad();
-        pauseMenu.SetActive(false);
+        StartCoroutine(WaitBeforeLoad());
         SceneManager.LoadScene("TitleScreen");
-        
+        quitSound.SetActive(false);
+        Time.timeScale = 1;
     }
 
-    IEnumerator WaitBeforeLoad()
+    private IEnumerator WaitBeforeLoad()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
     }
 }
