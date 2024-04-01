@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class heeho : EnemyRework
+public class MonsterChase : EnemyRework
 {
     public Transform target;
     public float chaseRadius;
