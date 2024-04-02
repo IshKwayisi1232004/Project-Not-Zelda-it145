@@ -18,10 +18,10 @@ public class CollectItem : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject); 
-            collectSound.SetActive(true);
+           // collectSound.SetActive(true);
             orbCount++;
             Debug.Log("Orbs: " +  orbCount);
-            collectSound.SetActive(false);
+            //collectSound.SetActive(false);
             SceneManager.LoadScene("EndScreen");
         }
     }
