@@ -76,7 +76,7 @@ public class attackbehavior : MonoBehaviour
     private void Attack()
     {
         animator.SetTrigger("attacking");
-        slash();
+        //slash();
         timerToAttack = swordSpeed;
         //attacking = true;
         //attackArea.SetActive(attacking);

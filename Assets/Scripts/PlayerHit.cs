@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerHit : MonoBehaviour
 {
+    public GameObject enemySound;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        enemySound.SetActive(false);   
     }
 
     // Update is called once per frame
@@ -20,7 +22,9 @@ public class PlayerHit : MonoBehaviour
     {
       if(other.tag == "enemy")
         {
+            enemySound.SetActive(true);
             Destroy(other.gameObject);
+            
         }
     }
 }

@@ -24,7 +24,7 @@ public class PlayerLife : MonoBehaviour
     {
         currentHealth -= amount;
 
-        if(currentHealth == 0)
+        if(currentHealth <= 0)
         {
             anim.SetTrigger("IsDead");
             death.SetActive(true);
@@ -49,6 +49,10 @@ public class PlayerLife : MonoBehaviour
         if (currentHealth < 2)
         {
             Destroy(hearts[0].gameObject);
+            Destroy(hearts[1].gameObject);
+            Destroy(hearts[2].gameObject);
+            Destroy(hearts[3].gameObject);
+            Destroy(hearts[4].gameObject);
         }
         else if (currentHealth < 4)
         {

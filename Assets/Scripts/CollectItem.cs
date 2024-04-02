@@ -6,19 +6,22 @@ using UnityEngine.SceneManagement;
 public class CollectItem : MonoBehaviour
 {
     private int orbCount = 0;
+    public GameObject collectSound;
     // Start is called before the first frame update
-    //void Start()
-    //{
-        
-    //}
+    void Start()
+    {
+        collectSound.SetActive(false);
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject); 
+            collectSound.SetActive(true);
             orbCount++;
             Debug.Log("Orbs: " +  orbCount);
+            collectSound.SetActive(false);
             SceneManager.LoadScene("EndScreen");
         }
     }
