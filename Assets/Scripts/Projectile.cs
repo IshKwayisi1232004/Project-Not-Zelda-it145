@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
     public float angle = 45f;
     private Rigidbody rb;
     private Vector3 initialVelocity;
+    public GameObject projectileItem;
 
     void Start()
     {
