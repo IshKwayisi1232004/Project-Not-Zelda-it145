@@ -24,6 +24,8 @@ public class PlayerHit : MonoBehaviour
         {
             enemySound.SetActive(true);
             Destroy(other.gameObject);
+            ScoreManager.instance.addPoint();
+            
             
         }
     }
