@@ -11,7 +11,8 @@ public class ScoreManager : MonoBehaviour
     public Text scoreText;
     public Text saveScore;
 
-    int score = 0;
+    public int score = 0;
+    int finalScore;
 
     private void Awake()
     {
@@ -24,18 +25,29 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score: " + score.ToString();
     }
 
-    public void addPoint()
+    public void addPointBronze()
     {
-        score += 1;
+        score += 50;
         scoreText.text = "Score: " + score.ToString();
-        Debug.Log(scoreText);
-       // if(SceneManager = "Endcreen")
-        //{
+    }
 
-        //}
+    public void addPointSilver()
+    {
+        score += 200;
+        scoreText.text = "Score: " + score.ToString();
+    }
+
+    public void addPointGold()
+    {
+        score += 400;
+        scoreText.text = "Score: " + score.ToString();
+    }
+
+    public void showPoint() { 
+        finalScore = score;
     }
 
     void Update() {
-        saveScore = scoreText;
+        PlayerPrefs.SetInt("CoinsCollected", score);
     }
 }

@@ -24,9 +24,21 @@ public class PlayerHit : MonoBehaviour
         {
             enemySound.SetActive(true);
             Destroy(other.gameObject);
-            ScoreManager.instance.addPoint();
-            
-            
+            ScoreManager.instance.addPointBronze(); 
+        }
+
+        if (other.tag == "hee-ho")
+        {
+            enemySound.SetActive(true);
+            Destroy(other.gameObject);
+            ScoreManager.instance.addPointSilver();
+        }
+
+        if (other.tag == "tonberry")
+        {
+            enemySound.SetActive(true);
+            Destroy(other.gameObject);
+            ScoreManager.instance.addPointGold();
         }
     }
 }
