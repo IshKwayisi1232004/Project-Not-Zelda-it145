@@ -43,10 +43,6 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score: " + score.ToString();
     }
 
-    public void showPoint() { 
-        finalScore = score;
-    }
-
     void Update() {
         PlayerPrefs.SetInt("CoinsCollected", score);
     }

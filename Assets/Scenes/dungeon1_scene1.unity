@@ -296,7 +296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a392ef0f363c142b15d99b26729890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySound: {fileID: 0}
+  slimeSound: {fileID: 0}
+  heeSound: {fileID: 0}
+  tonberrySound: {fileID: 0}
 --- !u!95 &55703726
 Animator:
   serializedVersion: 5
@@ -369,7 +371,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &63403698
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -674,7 +675,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 10
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!50 &106136113
 Rigidbody2D:
   serializedVersion: 4
@@ -898,7 +898,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!114 &122735077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1088,7 +1087,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &128451334
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1387,6 +1385,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129536002}
   m_CullTransparentMesh: 1
+--- !u!1 &173509078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 173509080}
+  - component: {fileID: 173509079}
+  m_Layer: 0
+  m_Name: HeartBeat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!328 &173509079
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173509078}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 1c38c021f4c0eda4ca6ee6a397e697d7, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 0
+  m_PlaybackSpeed: 1.95
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!4 &173509080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173509078}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1059429424}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &180105475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,7 +1551,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a392ef0f363c142b15d99b26729890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySound: {fileID: 0}
+  slimeSound: {fileID: 0}
+  heeSound: {fileID: 0}
+  tonberrySound: {fileID: 0}
 --- !u!95 &180105479
 Animator:
   serializedVersion: 5
@@ -1585,7 +1653,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!114 &203063896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1775,7 +1842,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &208240144
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2019,7 +2085,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!114 &227183897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2229,7 +2294,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 10
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!50 &232026134
 Rigidbody2D:
   serializedVersion: 4
@@ -2565,7 +2629,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a392ef0f363c142b15d99b26729890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySound: {fileID: 0}
+  slimeSound: {fileID: 0}
+  heeSound: {fileID: 0}
+  tonberrySound: {fileID: 0}
 --- !u!95 &244679533
 Animator:
   serializedVersion: 5
@@ -2792,7 +2858,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c05f801f0e8da434fb0618d66a3d0487, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.485
+  m_Volume: 0.299
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2942,7 +3008,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &379488606
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13359,7 +13424,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396836926}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: a21176eab4d6dc343801fd67f36e0993, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 5c1882181034db349a0695d79cdf6602, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -13421,7 +13486,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 405.8, y: 18.5}
+  m_AnchoredPosition: {x: 384.76, y: 18.5}
   m_SizeDelta: {x: 760.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &413176014
@@ -13517,7 +13582,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &438440768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13683,6 +13747,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &463380831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 463380833}
+  - component: {fileID: 463380832}
+  m_Layer: 0
+  m_Name: HeeSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!328 &463380832
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463380831}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: ffa7ef5f5e96301408a3c4ff31562ea8, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!4 &463380833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463380831}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6768363, y: 0.5142649, z: 0.0024709695}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &475538392
 GameObject:
   m_ObjectHideFlags: 0
@@ -13734,7 +13866,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &475538395
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14069,7 +14200,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!114 &507939241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14195,7 +14325,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!114 &537203244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14405,7 +14534,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 10
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!50 &544735675
 Rigidbody2D:
   serializedVersion: 4
@@ -30981,7 +31109,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!114 &705532718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31171,7 +31298,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &713280585
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31388,7 +31514,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &806950578
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31697,7 +31822,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 10
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!50 &956873001
 Rigidbody2D:
   serializedVersion: 4
@@ -31894,7 +32018,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &1017879276
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32297,6 +32420,7 @@ Transform:
   - {fileID: 244679530}
   - {fileID: 55703723}
   - {fileID: 180105476}
+  - {fileID: 173509080}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1059429425
@@ -32379,6 +32503,7 @@ MonoBehaviour:
   currentHealth: 10
   anim: {fileID: 1059429425}
   death: {fileID: 340493772}
+  heartBeat: {fileID: 173509078}
   hearts:
   - {fileID: 1627506816}
   - {fileID: 1779915445}
@@ -32485,7 +32610,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a392ef0f363c142b15d99b26729890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySound: {fileID: 396836926}
+  slimeSound: {fileID: 396836926}
+  heeSound: {fileID: 463380831}
+  tonberrySound: {fileID: 1085639202}
 --- !u!114 &1059429434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32585,7 +32712,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 10
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!50 &1075509141
 Rigidbody2D:
   serializedVersion: 4
@@ -32731,6 +32857,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1085639202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1085639204}
+  - component: {fileID: 1085639203}
+  m_Layer: 0
+  m_Name: TonberrySound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!328 &1085639203
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085639202}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: a21176eab4d6dc343801fd67f36e0993, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!4 &1085639204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085639202}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6768363, y: 0.5142649, z: 0.0024709695}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1095232298
 GameObject:
   m_ObjectHideFlags: 0
@@ -32981,7 +33175,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &1165750121
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33243,7 +33436,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a392ef0f363c142b15d99b26729890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySound: {fileID: 0}
+  slimeSound: {fileID: 0}
+  heeSound: {fileID: 0}
+  tonberrySound: {fileID: 0}
 --- !u!95 &1171007617
 Animator:
   serializedVersion: 5
@@ -33316,7 +33511,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &1199273275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33560,7 +33754,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!114 &1202083660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33750,7 +33943,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &1219842141
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34260,7 +34452,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 10
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!1 &1330292495
 GameObject:
   m_ObjectHideFlags: 0
@@ -34312,7 +34503,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &1330292498
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34549,7 +34739,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 10
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!50 &1340239920
 Rigidbody2D:
   serializedVersion: 4
@@ -34766,7 +34955,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 10
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!50 &1355522267
 Rigidbody2D:
   serializedVersion: 4
@@ -34983,7 +35171,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 10
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!50 &1365971608
 Rigidbody2D:
   serializedVersion: 4
@@ -35180,7 +35367,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &1384623940
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35562,7 +35748,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!1 &1449331216
 GameObject:
   m_ObjectHideFlags: 0
@@ -35641,7 +35826,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!114 &1449331220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36133,7 +36317,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 10
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!50 &1583101729
 Rigidbody2D:
   serializedVersion: 4
@@ -36639,7 +36822,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!114 &1685826580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36829,7 +37011,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &1695463869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37073,7 +37254,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!114 &1701146272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37418,7 +37598,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!114 &1778744092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37683,7 +37862,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &1780953663
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37900,7 +38078,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &1806012976
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38137,7 +38314,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 10
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!50 &1825900786
 Rigidbody2D:
   serializedVersion: 4
@@ -38361,7 +38537,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!114 &1836688717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38551,7 +38726,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &1842169517
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38768,7 +38942,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amount: 2
   PlayerLife: {fileID: 1059429428}
-  damageSound: {fileID: 0}
 --- !u!61 &1859624030
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41172,3 +41345,5 @@ SceneRoots:
   - {fileID: 1056673150}
   - {fileID: 1095232299}
   - {fileID: 396836927}
+  - {fileID: 463380833}
+  - {fileID: 1085639204}
