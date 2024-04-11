@@ -11,13 +11,18 @@ public class attackbehavior : MonoBehaviour
     public GameObject swordSlash;
     public GameObject arrowAttack;
     public Transform arrowSpawnPoint;
-    public GameObject arrowHolder;
-    private bool attacking = false;
+    //public Transform arrowSpawnPointRight;
+    //public Transform arrowSpawnPointLeft;
+    //public Transform arrowSpawnPointDown;
+    public Bow_Arrow arrowHolder;
+    //private bool attacking = false;
+
 
     [SerializeField] private float swordSpeed;
     [SerializeField] public float arrowSpeed = 10;
 
     private float timerToAttack = 0.25f;
+    private float timerToArrow = 0.2f;
     //private float timer = 0f;
 
     public Animator animator;
@@ -45,8 +50,7 @@ public class attackbehavior : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Arrow_Attack();
-                var arrow1 = Instantiate(arrowHolder, arrowSpawnPoint.position, arrowSpawnPoint.rotation);
-                arrow1.GetComponent<Rigidbody2D>().velocity = arrowSpawnPoint.up * arrowSpeed;
+                Instantiate(arrowHolder, arrowSpawnPoint.position, transform.rotation);
             }
         }
         else
@@ -54,6 +58,7 @@ public class attackbehavior : MonoBehaviour
             timerToAttack -= Time.deltaTime;
             animator.ResetTrigger("attacking");
             stopSlash();
+            timerToArrow -= Time.deltaTime;
             animator.ResetTrigger("bowArrow");
             stopArrow();
         }
@@ -73,8 +78,9 @@ public class attackbehavior : MonoBehaviour
     private void Arrow_Attack()
     {
         animator.SetTrigger("bowArrow");
-        timerToAttack = arrowSpeed;
+        timerToArrow = arrowSpeed;
     }
+
 
     void slash()
     {

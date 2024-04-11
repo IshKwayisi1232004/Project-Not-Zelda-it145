@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject footstep;
 
-    Vector2 movement;
+    public Vector2 movement;
 
     private void Start()
     {
@@ -75,7 +75,17 @@ public class PlayerMovement : MonoBehaviour
             stopFootSteps();
         }
 
+        //if(!Mathf.Approximately(movement.x, 0f))
+        //{
+        //    transform.rotation = movement.x > 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
+        //}
+
+       //if (!Mathf.Approximately(movement.y, 0f))
+       //{
+       //     transform.rotation = movement.y > 0 ? Quaternion.Euler(180, 0, 0) : Quaternion.identity;
+       //}
     }
+
 
     void FixedUpdate()
     {

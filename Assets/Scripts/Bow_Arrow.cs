@@ -1,21 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Bow_Arrow : MonoBehaviour
 {
     //Arrow
-    public float life = 3; 
+    public float speed = 4.5F;
 
-
-    private void Awake()
+    private void Update()
     {
-        Destroy(gameObject, life);
+        transform.position += transform.up * Time.deltaTime * speed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(collision.gameObject);
-        Destroy(gameObject);
+        if (other.tag == "enemy")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+            ScoreManager.instance.addPointBronze();
+        }
+
+        if (other.tag == "hee-ho")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+            ScoreManager.instance.addPointSilver();
+        }
+
+        if (other.tag == "tonberry")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+            ScoreManager.instance.addPointGold();
+        }
+
     }
 }
