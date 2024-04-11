@@ -18,23 +18,14 @@ public class CollectItem : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        //string dataToKeep = myText.text;
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject); 
-           // collectSound.SetActive(true);
             orbCount++;
             Debug.Log("Orbs: " +  orbCount);
-            //collectSound.SetActive(false);
             SceneManager.LoadScene("EndScreen");
-            //StaticData.valueToKeep = dataToKeep;
 
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        ScoreManager score;
-    }
 }

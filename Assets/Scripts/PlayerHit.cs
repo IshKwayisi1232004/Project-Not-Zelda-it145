@@ -32,6 +32,10 @@ public class PlayerHit : MonoBehaviour
             Destroy(other.gameObject);
             ScoreManager.instance.addPointBronze(); 
         }
+        else
+        {
+            slimeSound.SetActive(false);
+        }
 
         if (other.tag == "hee-ho")
         {
@@ -41,6 +45,10 @@ public class PlayerHit : MonoBehaviour
             Destroy(other.gameObject);
             ScoreManager.instance.addPointSilver();
         }
+        else
+        {
+            heeSound.SetActive(false);
+        }
 
         if (other.tag == "tonberry")
         {
@@ -49,6 +57,10 @@ public class PlayerHit : MonoBehaviour
             tonberrySound.SetActive(true);
             Destroy(other.gameObject);
             ScoreManager.instance.addPointGold();
+        }
+        else
+        {
+            tonberrySound.SetActive(false);
         }
     }
 }

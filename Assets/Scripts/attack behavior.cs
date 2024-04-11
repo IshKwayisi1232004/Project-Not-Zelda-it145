@@ -9,6 +9,7 @@ public class attackbehavior : MonoBehaviour
     private GameObject attackArea = default;
     public GameObject swordSlash;
     public GameObject arrowAttack;
+    public GameObject arrowHolder;
     private bool attacking = false;
 
     [SerializeField] private float swordSpeed;

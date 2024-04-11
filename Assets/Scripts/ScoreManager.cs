@@ -6,22 +6,26 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
+    //Creates a public variable to transfer functions across differnt scripts
     public static ScoreManager instance;
 
+    //Creates the score text variable
     public Text scoreText;
-    public Text saveScore;
 
+    //Creates the score variable, where the score is stored. 
     public int score = 0;
-    int finalScore;
 
     private void Awake()
     {
+        //Allows the instance variable to be referred in other scripts
         instance = this;
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        //Always sets the score to 0 at the beginning of the
+        //program
         scoreText.text = "Score: " + score.ToString();
     }
 
@@ -44,6 +48,9 @@ public class ScoreManager : MonoBehaviour
     }
 
     void Update() {
+        //Here we are calling a class called "PlayerPrefs"
+        //And we are setting a tag and integer in the parameters
+        //This stores data for the player between different scenes
         PlayerPrefs.SetInt("CoinsCollected", score);
     }
 }
