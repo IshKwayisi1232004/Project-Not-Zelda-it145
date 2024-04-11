@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     private Rigidbody rb;
     private Vector3 initialVelocity;
     public GameObject projectileItem;
+    private float timerToAttack = 0.25f;
 
     void Start()
     {
@@ -27,4 +28,5 @@ public class Projectile : MonoBehaviour
     {
         rb.velocity = initialVelocity;
     }
+
 }

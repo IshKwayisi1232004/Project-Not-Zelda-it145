@@ -1,5 +1,6 @@
 //Script for the player to attack when a key is input.
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,11 +10,12 @@ public class attackbehavior : MonoBehaviour
     private GameObject attackArea = default;
     public GameObject swordSlash;
     public GameObject arrowAttack;
+    public Transform arrowSpawnPoint;
     public GameObject arrowHolder;
     private bool attacking = false;
 
     [SerializeField] private float swordSpeed;
-    [SerializeField] private float arrowSpeed;
+    [SerializeField] public float arrowSpeed = 10;
 
     private float timerToAttack = 0.25f;
     //private float timer = 0f;
@@ -42,8 +44,9 @@ public class attackbehavior : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                arrow();
                 Arrow_Attack();
+                var arrow1 = Instantiate(arrowHolder, arrowSpawnPoint.position, arrowSpawnPoint.rotation);
+                arrow1.GetComponent<Rigidbody2D>().velocity = arrowSpawnPoint.up * arrowSpeed;
             }
         }
         else
@@ -55,22 +58,6 @@ public class attackbehavior : MonoBehaviour
             stopArrow();
         }
 
-        // if (timerToAttack < 0f)
-        // {
-        //attacking = false;
-        //attackArea.SetActive(false);
-        //  if (Input.GetKeyDown(KeyCode.LeftShift))
-        // {
-        //    arrow();
-        //    Arrow_Attack();
-        // }
-        // }
-        //else
-        // {
-        //   timerToAttack -= Time.deltaTime;
-        //   animator.ResetTrigger("bowArrow");
-        //   stopArrow();
-        // }
     }
 
 
