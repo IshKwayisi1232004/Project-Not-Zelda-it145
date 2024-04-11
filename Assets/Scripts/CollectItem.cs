@@ -33,7 +33,8 @@ public class CollectItem : MonoBehaviour
     }
 
     // Update is called once per frame
-    //void Update()
-    //{    
-    //}
+    void Update()
+    {
+        ScoreManager score;
+    }
 }

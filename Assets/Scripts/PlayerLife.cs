@@ -9,6 +9,7 @@ public class PlayerLife : MonoBehaviour
     public int currentHealth;
     public Animator anim;
     public GameObject death;
+    public GameObject heartBeat;
     public GameObject[] hearts;
 
 
@@ -18,6 +19,7 @@ public class PlayerLife : MonoBehaviour
         currentHealth = maxHealth;
         anim.ResetTrigger("IsDead");
         death.SetActive(false);
+        heartBeat.SetActive(false);
     }
 
     public void takeDamage(int amount)
@@ -30,6 +32,11 @@ public class PlayerLife : MonoBehaviour
             death.SetActive(true);
             StartCoroutine(spawnDelay());
         }
+    }
+
+    void lastHit()
+    {
+        heartBeat.SetActive(true);
     }
 
     void heal(int amount)
@@ -53,10 +60,12 @@ public class PlayerLife : MonoBehaviour
             Destroy(hearts[2].gameObject);
             Destroy(hearts[3].gameObject);
             Destroy(hearts[4].gameObject);
+            heartBeat.SetActive(false);
         }
         else if (currentHealth < 4)
         {
             Destroy(hearts[1].gameObject);
+            lastHit();
         }
         else if (currentHealth < 6)
         {
@@ -70,8 +79,6 @@ public class PlayerLife : MonoBehaviour
         {
             Destroy(hearts[4].gameObject);
         }
-     
-   
 }
 
 

@@ -296,7 +296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a392ef0f363c142b15d99b26729890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySound: {fileID: 0}
+  slimeSound: {fileID: 0}
+  heeSound: {fileID: 0}
+  tonberrySound: {fileID: 0}
 --- !u!95 &55703726
 Animator:
   serializedVersion: 5
@@ -335,7 +337,7 @@ GameObject:
   - component: {fileID: 63403697}
   m_Layer: 0
   m_Name: hee-ho (2)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -619,7 +621,7 @@ GameObject:
   - component: {fileID: 106136111}
   m_Layer: 0
   m_Name: tonberry (2)
-  m_TagString: enemy
+  m_TagString: tonberry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1051,7 +1053,7 @@ GameObject:
   - component: {fileID: 128451333}
   m_Layer: 0
   m_Name: hee-ho (3)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1284,9 +1286,9 @@ RectTransform:
   - {fileID: 1610216187}
   m_Father: {fileID: 1102783895}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -404.4, y: -169.1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -57.549988, y: 23.899994}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &129536004
@@ -1383,6 +1385,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129536002}
   m_CullTransparentMesh: 1
+--- !u!1 &173509078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 173509080}
+  - component: {fileID: 173509079}
+  m_Layer: 0
+  m_Name: HeartBeat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!328 &173509079
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173509078}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 1c38c021f4c0eda4ca6ee6a397e697d7, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 0
+  m_PlaybackSpeed: 1.95
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!4 &173509080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173509078}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1059429424}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &180105475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,7 +1551,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a392ef0f363c142b15d99b26729890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySound: {fileID: 0}
+  slimeSound: {fileID: 0}
+  heeSound: {fileID: 0}
+  tonberrySound: {fileID: 0}
 --- !u!95 &180105479
 Animator:
   serializedVersion: 5
@@ -1736,7 +1808,7 @@ GameObject:
   - component: {fileID: 208240143}
   m_Layer: 0
   m_Name: hee-ho (15)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2168,7 +2240,7 @@ GameObject:
   - component: {fileID: 232026132}
   m_Layer: 0
   m_Name: tonberry (7)
-  m_TagString: enemy
+  m_TagString: tonberry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2557,7 +2629,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a392ef0f363c142b15d99b26729890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySound: {fileID: 0}
+  slimeSound: {fileID: 0}
+  heeSound: {fileID: 0}
+  tonberrySound: {fileID: 0}
 --- !u!95 &244679533
 Animator:
   serializedVersion: 5
@@ -2784,7 +2858,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c05f801f0e8da434fb0618d66a3d0487, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.485
+  m_Volume: 0.299
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2900,7 +2974,7 @@ GameObject:
   - component: {fileID: 379488605}
   m_Layer: 0
   m_Name: hee-ho (9)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13350,7 +13424,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396836926}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: a21176eab4d6dc343801fd67f36e0993, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 5c1882181034db349a0695d79cdf6602, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -13410,10 +13484,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1102783895}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -214.5, y: 18.5}
-  m_SizeDelta: {x: 303.02, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 384.76, y: 18.5}
+  m_SizeDelta: {x: 760.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &413176014
 MonoBehaviour:
@@ -13437,10 +13511,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 43a148d20839bfe4da33430bac516108, type: 3}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 2
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -13448,7 +13522,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score:'
+  m_Text: 'Score: 0'
 --- !u!222 &413176015
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13474,7 +13548,7 @@ GameObject:
   - component: {fileID: 438440767}
   m_Layer: 0
   m_Name: hee-ho (11)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13673,6 +13747,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &463380831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 463380833}
+  - component: {fileID: 463380832}
+  m_Layer: 0
+  m_Name: HeeSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!328 &463380832
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463380831}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: ffa7ef5f5e96301408a3c4ff31562ea8, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!4 &463380833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463380831}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6768363, y: 0.5142649, z: 0.0024709695}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &475538392
 GameObject:
   m_ObjectHideFlags: 0
@@ -13690,7 +13832,7 @@ GameObject:
   - component: {fileID: 475538394}
   m_Layer: 0
   m_Name: hee-ho (18)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14338,7 +14480,7 @@ GameObject:
   - component: {fileID: 544735673}
   m_Layer: 0
   m_Name: tonberry (8)
-  m_TagString: enemy
+  m_TagString: tonberry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31122,7 +31264,7 @@ GameObject:
   - component: {fileID: 713280584}
   m_Layer: 0
   m_Name: hee-ho (5)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31338,7 +31480,7 @@ GameObject:
   - component: {fileID: 806950577}
   m_Layer: 0
   m_Name: hee-ho (4)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31626,7 +31768,7 @@ GameObject:
   - component: {fileID: 956872999}
   m_Layer: 0
   m_Name: tonberry (1)
-  m_TagString: enemy
+  m_TagString: tonberry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31842,7 +31984,7 @@ GameObject:
   - component: {fileID: 1017879275}
   m_Layer: 0
   m_Name: hee-ho (19)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32278,6 +32420,7 @@ Transform:
   - {fileID: 244679530}
   - {fileID: 55703723}
   - {fileID: 180105476}
+  - {fileID: 173509080}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1059429425
@@ -32360,6 +32503,7 @@ MonoBehaviour:
   currentHealth: 10
   anim: {fileID: 1059429425}
   death: {fileID: 340493772}
+  heartBeat: {fileID: 173509078}
   hearts:
   - {fileID: 1627506816}
   - {fileID: 1779915445}
@@ -32466,7 +32610,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a392ef0f363c142b15d99b26729890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySound: {fileID: 396836926}
+  slimeSound: {fileID: 396836926}
+  heeSound: {fileID: 463380831}
+  tonberrySound: {fileID: 1085639202}
 --- !u!114 &1059429434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32512,7 +32658,7 @@ GameObject:
   - component: {fileID: 1075509139}
   m_Layer: 0
   m_Name: tonberry (9)
-  m_TagString: enemy
+  m_TagString: tonberry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32711,6 +32857,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1085639202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1085639204}
+  - component: {fileID: 1085639203}
+  m_Layer: 0
+  m_Name: TonberrySound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!328 &1085639203
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085639202}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: a21176eab4d6dc343801fd67f36e0993, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!4 &1085639204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085639202}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6768363, y: 0.5142649, z: 0.0024709695}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1095232298
 GameObject:
   m_ObjectHideFlags: 0
@@ -32863,7 +33077,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -32909,6 +33123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 413176014}
   saveScore: {fileID: 0}
+  score: 0
 --- !u!1 &1165750118
 GameObject:
   m_ObjectHideFlags: 0
@@ -32926,7 +33141,7 @@ GameObject:
   - component: {fileID: 1165750120}
   m_Layer: 0
   m_Name: hee-ho (8)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33221,7 +33436,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a392ef0f363c142b15d99b26729890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySound: {fileID: 0}
+  slimeSound: {fileID: 0}
+  heeSound: {fileID: 0}
+  tonberrySound: {fileID: 0}
 --- !u!95 &1171007617
 Animator:
   serializedVersion: 5
@@ -33260,7 +33477,7 @@ GameObject:
   - component: {fileID: 1199273274}
   m_Layer: 0
   m_Name: hee-ho (1)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33692,7 +33909,7 @@ GameObject:
   - component: {fileID: 1219842140}
   m_Layer: 0
   m_Name: hee-ho (6)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34036,7 +34253,7 @@ GameObject:
   - component: {fileID: 1300039891}
   m_Layer: 0
   m_Name: tonberry
-  m_TagString: enemy
+  m_TagString: tonberry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34252,7 +34469,7 @@ GameObject:
   - component: {fileID: 1330292497}
   m_Layer: 0
   m_Name: hee-ho (7)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34468,7 +34685,7 @@ GameObject:
   - component: {fileID: 1340239918}
   m_Layer: 0
   m_Name: tonberry (10)
-  m_TagString: enemy
+  m_TagString: tonberry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34684,7 +34901,7 @@ GameObject:
   - component: {fileID: 1355522265}
   m_Layer: 0
   m_Name: tonberry (3)
-  m_TagString: enemy
+  m_TagString: tonberry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34900,7 +35117,7 @@ GameObject:
   - component: {fileID: 1365971606}
   m_Layer: 0
   m_Name: tonberry (6)
-  m_TagString: enemy
+  m_TagString: tonberry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35116,7 +35333,7 @@ GameObject:
   - component: {fileID: 1384623939}
   m_Layer: 0
   m_Name: hee-ho (17)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35332,7 +35549,7 @@ GameObject:
   - component: {fileID: 1429246727}
   m_Layer: 0
   m_Name: hee-ho
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36046,7 +36263,7 @@ GameObject:
   - component: {fileID: 1583101727}
   m_Layer: 0
   m_Name: tonberry (5)
-  m_TagString: enemy
+  m_TagString: tonberry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36760,7 +36977,7 @@ GameObject:
   - component: {fileID: 1695463868}
   m_Layer: 0
   m_Name: hee-ho (14)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37611,7 +37828,7 @@ GameObject:
   - component: {fileID: 1780953662}
   m_Layer: 0
   m_Name: hee-ho (12)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37827,7 +38044,7 @@ GameObject:
   - component: {fileID: 1806012975}
   m_Layer: 0
   m_Name: hee-ho (16)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38043,7 +38260,7 @@ GameObject:
   - component: {fileID: 1825900784}
   m_Layer: 0
   m_Name: tonberry (4)
-  m_TagString: enemy
+  m_TagString: tonberry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38475,7 +38692,7 @@ GameObject:
   - component: {fileID: 1842169516}
   m_Layer: 0
   m_Name: hee-ho (10)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38691,7 +38908,7 @@ GameObject:
   - component: {fileID: 1859624029}
   m_Layer: 0
   m_Name: hee-ho (13)
-  m_TagString: enemy
+  m_TagString: hee-ho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41128,3 +41345,5 @@ SceneRoots:
   - {fileID: 1056673150}
   - {fileID: 1095232299}
   - {fileID: 396836927}
+  - {fileID: 463380833}
+  - {fileID: 1085639204}

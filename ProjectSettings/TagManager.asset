@@ -8,6 +8,8 @@ TagManager:
   - WayPoint
   - enemy
   - breakable
+  - hee-ho
+  - tonberry
   layers:
   - Default
   - TransparentFX
