@@ -32073,6 +32073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectSound: {fileID: 0}
+  save: {fileID: 0}
 --- !u!212 &1056673149
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32435,6 +32436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectSound: {fileID: 0}
+  save: {fileID: 0}
 --- !u!114 &1059429432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32906,6 +32908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 413176014}
+  saveScore: {fileID: 0}
 --- !u!1 &1165750118
 GameObject:
   m_ObjectHideFlags: 0
