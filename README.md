@@ -32,9 +32,9 @@ I also contributed to level design and collaborated with teammates on
 combat and player health functionality.
 
 ### Team Contributions
-- **Austin:** Character and dungeon art, animations, and collaboration on C# scripts
-- **Isaac:** Collaborated on player combat functionality
-- **Kyle:** Collaborated on the player health system
+- **Austin Hoang:** Character and dungeon art, animations, and collaboration on C# scripts
+- **Isaac Akhtar Zada ​:** Collaborated on player combat functionality
+- **Kyle Frederick:** Collaborated on the player health system
 
 ### Key Features
 
