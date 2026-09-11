@@ -15,6 +15,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         pauseSound.SetActive(false);
         quitSound.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void Pause()
