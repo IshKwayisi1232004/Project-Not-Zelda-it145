@@ -2,8 +2,8 @@
 
 > A Unity gameplay programming prototype demonstrating level design, game systems and game AI
 
-[![Engine](https://img.shields.io/badge/Engine-Unity%20-blue)]()
-[![Language](https://img.shields.io/badge/Language-C%23%20-purple)]()
+[![Engine](https://img.shields.io/badge/-Unity-000000?style=flat-square&logo=unity&logoColor=white)]()
+[![Language](https://img.shields.io/badge/C%23-C--Sharp-brightgreen?style=flat&logo=csharp)]()
 [![Status](https://img.shields.io/badge/Status-Completed%20-green)]()
 
 ## 📖 Overview
